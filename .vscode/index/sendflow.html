@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>送花-代理模式</title>
+</head>
+
+<body>
+    <script>
+        // {} json 对象字面量
+        const ljd = {
+            name: "吴江东",
+            hometown: "赣州",
+            single: false,
+            room: "1315"
+        }
+        // JS 极具表现力的语言
+        // 对象字面量
+        const cst = {
+            // 属性
+            name: "陈松涛",
+            single: true,
+            hometown: "高安",
+            hobbies: ["桌球", "下棋", "游戏"],
+            floweK:["玫瑰花","百合花"],
+            yz: 78,
+            // 送花？ 目标 
+            // target 形参
+            send_flower(target) {
+                target.receiveFlower(cst);
+            }
+        };
+        const xm = {
+            name: "小美",
+            receiveFlower(sender) {
+                // console.log("收到了花");
+                // 颜值 85以上 
+                if (sender.yz < 85) {
+                    console.log("你是个好人");
+                    console.log("百合花");
+                } else {
+                    console.log("万达走一波");
+                    console.log("玫瑰花");
+                }
+            },
+            //方法  监听事件
+            listenGoodMood(fn){
+                console.log("心情不好");
+             setTimeout(function(){
+                console.log("现在性情很不错，感觉人生已经达到了高潮");
+                //调用者把这个函数调用一下
+                fn();
+                
+             },3000)
+        }
+        }
+        
+        const xiaohong = {
+            name: "小红",
+            hometown: "高安",
+            sex: "女",
+            receiveFlower(sender) { 
+
+                // 代理对象，实现复杂需求，
+                // 监听小美的心情，3秒钟后心情好起来
+                xm.listenGoodMood(function(){
+                    xm.receiveFlower(sender)
+                });
+            //  xm.receiveFlower(sender);
+                // if (sender.name === "陈松涛") {
+                //     console.log("涛哥，让我们一起吧");
+                // } else {
+                //     console.log("玩去");
+                // }
+            } 
+        }
+    </script>
+</body>
+
+</html>

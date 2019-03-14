@@ -25,8 +25,38 @@ QQ  631758924   加密过后的
   js  数组  最廉价的数据结构，
   {}  块级作用域
 
+  js  组织代码的方式
+  语句  ";"表示结束
+  函数    function(){}    为了一（功能）件事  小于10行代码
 
+   代码块  { }  每得到一个正确的qq号码 
+   抽象是最重要的编程思想
 
+   数值型 123 
+   字符串 “abc' 
+   布尔值 true || false
+   null  空
+   undefined 未定义
+   symbol 
+   以上六种成为基本数据类型
+
+   其他的都是object  复杂数据类型
+
+   array [] 是一个可以便利的对象
+   json {}是一个可以枚举的对象  
+   function  是一等对象
+   typeof  可以得到变量的类型
+
+  作用域    scope https://blog.csdn.net/tanga842428/article/details/78567593
+  - 全局作用域  window
+   window.name (就是 独有  宿主是浏览器窗口) === name (其他语言一样)
+    限定一个范围   跨作用域引用系统会报错
+   null 和 undefined 区别 http://www.cnblogs.com/eastday/archive/2010/03/03/1677324.html
+
+   const var let三者定义之间的区别
+   const 定义的是基本数据类型，并且需要初始化（否则会报错） 
+   var  大部分情况下是定义的是全局变量 但是可以也在局部变量下使用。
+   let  常用于声明的变量范围只在某一个代码块中有效。
 
 
 

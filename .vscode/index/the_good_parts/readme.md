@@ -11,4 +11,15 @@
           二是类型不同（对象转换为基本类型在进行比较）  尝试类型转换和比较
   4. 类型检测 【typeof,instance of，object。prototype.tostring,constructor(可被修改)，duck type]
       watch out 不同Windows或iframe间的对象类型检测不能使用 instance of
+
+  chapter 4 函数：
+  1. 函数对象  JavaScript中函数就是对象。对象是“名和值”的集合 并拥有一个连接到原型对象的隐藏连接。
+        对象字面量产生的对象连接到object.prototype。
+        函数对象连接到function。prototype（该原型对象连接到object.prototype）
+  2. 函数自变量 
+      1关键字function
+      2函数名，函数可以调用自己的名字，递归。无名是匿名函数anonymous
+      3形式参数，多个用逗号隔开
+      4包含在花括号中的一组语句，即函数主体。
+      函数可以被定义在其他函数之中，一个内部函数，除了可以访问自己的参数和变量，还可以访问，嵌套它的函数的参数和变量。
     

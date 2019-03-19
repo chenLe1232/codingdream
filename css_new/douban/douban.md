@@ -25,3 +25,10 @@ html结构及不顾
     做比例100% 正方形
     自适应设备里盒子的等比例设置 width 百分比，
     高度用padding-top
+
+    盒子与背景之间的关系。background-size   
+      学习的过程中  要把握好每个细节
+
+      background-position: x  y ;
+      background-size: contain  填满整个背景盒子  但是左右会有留白的情况出现；
+      /  是分隔的意思

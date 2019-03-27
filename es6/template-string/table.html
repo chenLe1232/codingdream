@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table</title>
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <td>name</td>
+        <td>age</td>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      
+    </tbody>
+  </table>
+  <script>
+    const tbody = document.getElementById('tbody');
+    // const person = {
+    //   name: '韩梅梅',
+    //   age: '18'
+    // }
+    // <tr>
+    //     <td>韩梅梅</td>
+    //     <td>18</td>
+    //   </tr>
+    const people = [{
+      name: '韩梅梅',
+      age: '18'
+    }, {
+      name: '蜗牛',
+      age: '19'
+    }];
+    const str = people.map((item)=>{
+      let aaa = `<tr><td>${item.name}</td><td>${item.age}</td></tr> `
+    return aaa
+    });
+    tbody.innerHTML = str;
+    // var hrml = people.map(function(e){
+    //   return
+      
+      // '<tr>
+      // <td>${e.name}</td>
+      // <td>${e.age}</td>
+      // </tr>
+      // '
+      
+      
+    // }).join('')
+   
+    // join 数组元素拼接了字符串
+    // const arr = [
+    //   'ecut', 'ecit'
+    // ];
+    //作业把people里的东西调用  塞成两个tr
+
+    
+
+  </script>
+</body>
+
+</html>

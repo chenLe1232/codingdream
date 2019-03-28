@@ -1,0 +1,31 @@
+undefined<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Type-check</title>
+</head>
+<body>
+    <script>
+        // typeof 搞不定的，type来搞
+      var Type = {};
+      for (var i =0,type;type = ['String','Array','Number'][i++];){
+        // typer undefined
+        // console.log(type,'-------');
+        (function(type){ Type["is" + type] = function (obj){
+            console.log(obj,'??????');
+            // type 会找到他是定义是的上下文中的那个type
+            // console.log(type,'+++++++++++++');
+            return Object.prototype.toString.call(obj) === '[object '+ type + ']'
+        }})(type)
+      }
+      //   优化定义 
+    //   type.isArray = function (){ return true};
+    //   type.isNumber = function(){return true};
+    //   type.isString = function(){return true};
+
+    
+    </script>
+</body>
+</html>[p]

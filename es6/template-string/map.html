@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组map</title>
+</head>
+
+<body>
+    <script>
+        const arr =[{
+            name:'ecut',good:false
+        },{
+            name:'ecut',good:true
+        },{
+            name:'ecut',good:true
+        }];
+       
+       
+        //  for(let i = 0; i<arr.length;i++){
+        //      console.log('for',(arr[i]));
+        //  }
+        //  arr.forEach(function(ele){
+        //     console.log(ele);
+        //  });
+
+        // 1. map 会返回一个新的数组
+        // 2. 新数组里的每一项 都是循环时 回调函数返回的结果 
+        const newArr = arr.map(function (ele) {
+            return{
+                name:ele.name,
+                good:ele.good,
+            }
+        });
+
+        // const schools = [
+        //     'ectu','jxufe','nanshi'
+        // ]
+        // const newschools = schools.map(school => {
+        //     return '<li>' + school + '</li>'
+        // })
+        // newschools=[
+        //     '<li>ecut</li>', '<li>jxufe</li>', '<li>nanshi</li>'
+        // ]
+        console.log(newArr[0]);
+    </script>
+</body>
+
+</html>

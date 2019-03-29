@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es5 时候 默认赋值
+     function Person (name = 'default name'){
+        //  if(name){
+            // 判断name 这个参数是否拥有
+        //  this.name = name || 'default name';
+        this.name = name;
+        //  赋予默认值
+    //     }else{
+    //         name = 'default name';
+    //     }
+     }
+     const p1 = new Person('lilei');
+
+     const p2 = new Person(); 
+     // {name: 'default name'}
+
+     //rest 参数 形式（... 变量名）
+     // 作用：获取多余参数
+     // 搭配的变量是一个数组
+     //Rest parameter must be last formal parameter  只能讲后面的参数设置为数组，中间的参数不能设置为数组
+     const arrow_sum = (a,...arg) =>{
+        console.log(arg);
+     }
+     arrow_sum(1,2,3,4);
+    </script>
+</body>
+</html>

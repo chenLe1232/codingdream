@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      const obj = {
+          foo:'fool val',
+          bar: 'bar val',
+          baz: 'baz val'
+      }
+    //   顺序没有什么太重要
+    // 解构出来并且付给str1
+    const obj1 = {
+        p:['hello',{msg:'world'}]
+    };
+    // obj1.p[1];
+    const {p:[hello,world]} = obj1;
+      const {baz,foo:str1} = obj;
+    </script>
+</body>
+</html>

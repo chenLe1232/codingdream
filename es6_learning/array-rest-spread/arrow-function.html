@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const ages = [
+            {
+                name: 'lilei', age: 18
+            },
+            {
+                name: 'dalilei', age: 18
+            }, {
+                name: 'hanmeimei', age: 18
+            }, {
+                name: 'haimeimei1', age: 18
+            }
+        ];
+        // const this_age = ages.filter((age)=> age.age >18);
+        // console.log(this_age)
+        const this_age = ages.find((age) => age.age > 20);
+        const this_age_filter = ages.filter((age) => age.age > 20);
+        const this_age1 = ages.findIndex((age) => age.age === 20);
+        // 检测每一项都是否满足回调函数的要求
+        const this_age_every = ages.every((age) => {
+            console.log(age.age)
+            return age.age > 16;
+        });
+        const this_age_some = ages.some((age) => age.age > 10);
+        console.log(this_age_every)
+                // console.log(this_age,this_age1,this_age_filter);
+
+    </script>
+</body>
+
+</html>
